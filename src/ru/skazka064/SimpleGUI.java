@@ -72,7 +72,6 @@ public class SimpleGUI extends JFrame {
 
 
 
-                   /* c:\\distrib\\archive\\*/
 
                     String dir = input.getText();
 
@@ -104,8 +103,9 @@ public class SimpleGUI extends JFrame {
                     for (int j = 0; j < cad.size(); j++) {
 
 
-                        File file = new File(dir + "\\" + cad.get(j));
-                        tom = new ArrayList<>(Arrays.asList(file.list()));
+                        File fileCad = new File(dir + "\\" + cad.get(j));
+
+                        tom = new ArrayList<>(Arrays.asList(fileCad.list()));
 
 
 
@@ -113,9 +113,9 @@ public class SimpleGUI extends JFrame {
                         for (int k = 0; k < tom.size(); k++) {
 
 
-                            File file2 = new File(dir + "\\" + cad.get(j) + "\\" + tom.get(k));
+                            File fileTom = new File(dir + "\\" + cad.get(j) + "\\" + tom.get(k));
 
-                            Pattern pattern = Pattern.compile("^Том_\\d+$");
+                            Pattern pattern = Pattern.compile("^Том_\\d+скан$");
                             matcher = pattern.matcher(tom.get(k));
 
                             if (matcher.find()) {
@@ -126,8 +126,8 @@ public class SimpleGUI extends JFrame {
 
 
 
-                            ArrayList<String> listSig = new ArrayList<String>(Arrays.asList(file2.list(sig)));
-                            ArrayList<String> listPdf = new ArrayList<String>(Arrays.asList(file2.list(pdf)));
+                            ArrayList<String> listSig = new ArrayList<String>(Arrays.asList(fileTom.list(sig)));
+                            ArrayList<String> listPdf = new ArrayList<String>(Arrays.asList(fileTom.list(pdf)));
                             ArrayList<String> listNewSig = new ArrayList<String>();
 
                             for (int i = 0; i < listSig.size(); i++) {
@@ -143,7 +143,7 @@ public class SimpleGUI extends JFrame {
 
                             } else {
 
-                                err.add(file2.getAbsoluteFile() + " - отсутствует sig файл! " + "\n");
+                                err.add(fileTom.getAbsoluteFile() + " - отсутствует sig файл! " + "\n");
                             }
 
 
@@ -177,14 +177,14 @@ public class SimpleGUI extends JFrame {
                             s2+= errDir.get(i)+ " - ошибка в названии директории 64_xx_xx_xxxxxx_x! " +"\n";
                         }
                     }
-            String s3 ="";
-            if (errTom.isEmpty()){
-                s3="Все директории Том написаны правильно!"+"\n";
-            }else {
-                for (int i=0; i<errTom.size(); i++){
-                    s3+= errTom.get(i)+" - ошибка в названии директории Том!"+"\n";
-                }
-            }
+                    String s3 ="";
+                    if (errTom.isEmpty()){
+                        s3="Все директории Том написаны правильно!"+"\n";
+                    }else {
+                        for (int i=0; i<errTom.size(); i++){
+                            s3+= errTom.get(i)+" - ошибка в названии директории Том_[число]скан!"+"\n";
+                        }
+                    }
 
 
              String s = s1+s2+s3;
