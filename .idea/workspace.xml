@@ -7,13 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0cb80df-30f9-4a7f-96d0-7eaaabe536b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Arch_jar/Arch.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Arch_jar/Arch.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI$ButtonEventListener$1PdfFiltr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI$ButtonEventListener$1PdfFiltr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI$ButtonEventListener$1SigFiltr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI$ButtonEventListener$1SigFiltr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI$ButtonEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI$ButtonEventListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Arch/ru/skazka064/SimpleGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/skazka064/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/skazka064/SimpleGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,11 +24,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/skazka064/SimpleGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="488">
+              <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3895#3903#0" expanded="true" />
+                <element signature="e#4005#4013#0" expanded="true" />
                 <element signature="e#3999#4007#0" expanded="true" />
                 <element signature="e#4106#4114#0" expanded="true" />
               </folding>
@@ -72,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-70" />
     <option name="y" value="526" />
     <option name="width" value="1698" />
@@ -164,7 +157,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12897311" />
@@ -196,23 +189,23 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ru/skazka064/SimpleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3895#3903#0" expanded="true" />
-            <element signature="e#3999#4007#0" expanded="true" />
-            <element signature="e#4106#4114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/skazka064/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/skazka064/SimpleGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4005#4013#0" expanded="true" />
+            <element signature="e#3999#4007#0" expanded="true" />
+            <element signature="e#4106#4114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

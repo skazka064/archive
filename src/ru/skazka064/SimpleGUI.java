@@ -87,6 +87,7 @@ public class SimpleGUI extends JFrame {
                     FilenameFilter pdf = new PdfFiltr();
 
 
+
                     Matcher matcher = null;
                     for (int i =0;i < cad.size(); i++){
                         Pattern pattern= Pattern.compile("\\d\\d_\\d\\d_\\d\\d\\d\\d\\d\\d_\\d+");
@@ -103,47 +104,57 @@ public class SimpleGUI extends JFrame {
                     for (int j = 0; j < cad.size(); j++) {
 
 
-                        File f = new File("c:\\distrib\\archive\\" + cad.get(j));
-                        tom = new ArrayList<>(Arrays.asList(f.list()));
-
-                        Pattern pattern = Pattern.compile("^Том_1$");
-                        matcher = pattern.matcher(tom.get(0));
-
-                        if (matcher.find()){
-
-                        }else {
-                            errTom.add("\\"+(cad.get(j)+"\\"+tom.get(0)+"\\"));
-                        }
-
-                        File f1 = new File("c:\\distrib\\archive\\" + cad.get(j) + "\\" + tom.get(0));
-
-                        ArrayList<String> listSig = new ArrayList<String>(Arrays.asList(f1.list(sig)));
-                        ArrayList<String> listPdf = new ArrayList<String>(Arrays.asList(f1.list(pdf)));
-                        ArrayList<String> listNewSig = new ArrayList<String>();
-
-                        for (int i = 0; i < listSig.size(); i++) {
-
-                            int lenght = listSig.get(i).length();
-                            listNewSig.add(listSig.get(i).substring(0, lenght - 4));
-
-                           /* System.out.println(listNewSig.get(i));*/
-
-                        }
-
-                        /*for (int i = 0; i < listPdf.size(); i++) {
+                        File file = new File(dir + "\\" + cad.get(j));
+                        tom = new ArrayList<>(Arrays.asList(file.list()));
 
 
-                            System.out.println(listPdf.get(i));
 
-                        }*/
 
-                        if (listNewSig.equals(listPdf)) {
-                           /* err.add("Папка "+f1.getAbsoluteFile()+" проверена, ошибок нет!");*/
-                        } else {
+                        for (int k = 0; k < tom.size(); k++) {
 
-                            err.add(f1.getAbsoluteFile()+" - отсутствует sig файл! "+"\n");
+
+                            File file2 = new File(dir + "\\" + cad.get(j) + "\\" + tom.get(k));
+
+                            Pattern pattern = Pattern.compile("^Том_\\d+$");
+                            matcher = pattern.matcher(tom.get(k));
+
+                            if (matcher.find()) {
+
+                            } else {
+                                errTom.add("\\" + (cad.get(j) + "\\" + tom.get(k) + "\\"));
+                            }
+
+
+
+                            ArrayList<String> listSig = new ArrayList<String>(Arrays.asList(file2.list(sig)));
+                            ArrayList<String> listPdf = new ArrayList<String>(Arrays.asList(file2.list(pdf)));
+                            ArrayList<String> listNewSig = new ArrayList<String>();
+
+                            for (int i = 0; i < listSig.size(); i++) {
+
+                                int lenght = listSig.get(i).length();
+                                listNewSig.add(listSig.get(i).substring(0, lenght - 4));
+
+
+                            }
+
+
+                            if (listNewSig.equals(listPdf)) {
+
+                            } else {
+
+                                err.add(file2.getAbsoluteFile() + " - отсутствует sig файл! " + "\n");
+                            }
+
+
                         }
                     }
+
+
+
+
+
+
                     SimpleGUI simpleGUI = new SimpleGUI();
 
 
@@ -168,14 +179,12 @@ public class SimpleGUI extends JFrame {
                     }
             String s3 ="";
             if (errTom.isEmpty()){
-                s3="Все директории Том_1 написаны правильно!"+"\n";
+                s3="Все директории Том написаны правильно!"+"\n";
             }else {
                 for (int i=0; i<errTom.size(); i++){
-                    s3+= errTom.get(i)+" - ошибка в названии директории Том_1!"+"\n";
+                    s3+= errTom.get(i)+" - ошибка в названии директории Том!"+"\n";
                 }
             }
-
-
 
 
              String s = s1+s2+s3;
@@ -194,4 +203,3 @@ public class SimpleGUI extends JFrame {
 
         }
     }
-
